@@ -1,3 +1,6 @@
+# Packages
+# -----------------------------------------------
+
 import numpy
 
 # Follow the tasks below to practice basic Python concepts.
@@ -27,7 +30,6 @@ print(step(2))
 #The function should return a numpy array of the same length, with all elements smaller than the cutoff being set to cutoff).
 #The name of the function should be ReLu
 
-
 # Your code here:
 # -----------------------------------------------
 def ReLu(arr, cutoff=0):
@@ -48,11 +50,9 @@ print(ReLu(numpy.array([-1, 0, 1, 2]), cutoff=0))
 # -----------------------------------------------
 
 def neural_net_layer(arr_2d, arr_1d):
-    res = arr_2d * arr_1d
-    res = ReLu(res)
-    return res
+    result = numpy.dot(arr_2d, arr_1d)
+    return ReLu(result)
 
 print(neural_net_layer(numpy.array([[1, 2], [3, 4]]), numpy.array([0.5, 1])))
-
 
 # ------------------------------------------
