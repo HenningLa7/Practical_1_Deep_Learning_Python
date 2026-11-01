@@ -16,11 +16,10 @@ import numpy
 def step(num):
     if (num > 0): return 1
     else: return -1
+
 print(step(2))
 
-
 # -----------------------------------------------
-
 
 # Task 2:
 # Instructions:
@@ -31,7 +30,10 @@ print(step(2))
 
 # Your code here:
 # -----------------------------------------------
-# def ReLu
+def ReLu(arr, cutoff=0):
+    return numpy.maximum(arr, cutoff)
+
+print(ReLu(numpy.array([-1, 0, 1, 2]), cutoff=0))
 
 
 # -----------------------------------------------
