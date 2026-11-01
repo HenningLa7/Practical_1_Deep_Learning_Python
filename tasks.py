@@ -35,9 +35,7 @@ def ReLu(arr, cutoff=0):
 
 print(ReLu(numpy.array([-1, 0, 1, 2]), cutoff=0))
 
-
 # -----------------------------------------------
-
 
 # Task 3:
 # Instructions:
@@ -49,7 +47,12 @@ print(ReLu(numpy.array([-1, 0, 1, 2]), cutoff=0))
 # Your code here:
 # -----------------------------------------------
 
-# def neural_net_layer
+def neural_net_layer(arr_2d, arr_1d):
+    res = arr_2d * arr_1d
+    res = ReLu(res)
+    return res
+
+print(neural_net_layer(numpy.array([[1, 2], [3, 4]]), numpy.array([0.5, 1])))
 
 
 # ------------------------------------------
